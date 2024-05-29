@@ -9,5 +9,4 @@ RUN apk update && apk add --no-cache \
     zig \
     jq
 
-# Set the working directory
 WORKDIR /workspace
