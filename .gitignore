@@ -1,0 +1,4 @@
+build/
+bin/
+zig-cache/
+.DS_Store

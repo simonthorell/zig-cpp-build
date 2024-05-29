@@ -1,0 +1,32 @@
+{
+  "name": "zig-cpp-build",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // Configure tool-specific properties
+  "customizations": {
+    "extensions": [],
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools", // C/C++ Extension
+        "tiehuis.zig",        // Zig Language Support
+        "GitHub.copilot",     // GitHub Copilot
+        "tal7aouy.icons",     // Custom VS-Code Icons
+        "bierner.markdown-preview-github-styles" // Markdown Preview Github Styles
+      ]
+    },
+    "settings": {
+      // Set up the environment for Zig
+      "terminal.integrated.env.linux": {
+        "PATH": "${containerEnv:PATH}:/usr/local/bin"
+      },
+      // Optional: Set Zig formatting or other features
+      "files.associations": {
+        "*.zig": "zig"
+      },
+      "zig.buildOnSave": true,
+      "zig.enableDiagnostics": true
+    }
+  }
+}
